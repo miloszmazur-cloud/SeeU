@@ -48,7 +48,7 @@ int i = 0;
 
 
 Future<List<Message>> fetchMessages() async {
-  String url = 'http://seeu.energokrzem.nazwa.pl/getMessage';
+  String url = 'http://xx.xx.xx.xx/getMessage';
 
   try {
     final response = await http.get(Uri.parse(url), headers: {
@@ -515,7 +515,7 @@ Future<void> _addFriendMarker() async {
     Position position = await Geolocator.getCurrentPosition();
     double coorX = position.longitude;
     double coorY = position.latitude;
-    String url2 ='http://seeu.energokrzem.nazwa.pl/myPosition';
+    String url2 ='http://xx.xx.xx.xx/myPosition';
     
     final response = await http.post(Uri.parse(url2), headers: {
       'Content-Type': 'application/json',
@@ -743,3 +743,4 @@ void _onMarkerTapped(MarkerId markerId) {
     );
   }
 }
+

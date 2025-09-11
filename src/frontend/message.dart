@@ -79,7 +79,7 @@ Future<void> fetchData() async {
 }
 
   Future<void> sendMessage(String text) async {
-    String url = 'http://seeu.energokrzem.nazwa.pl/sendMessage';
+    String url = 'http://xx.xx.xx.xx/sendMessage';
     try {
       final response = await http.post(Uri.parse(url), headers: {
         'Content-Type': 'application/json',
@@ -157,4 +157,5 @@ Future<void> fetchData() async {
       ),
     );
   }
+
 }

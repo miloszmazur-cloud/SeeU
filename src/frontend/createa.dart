@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:crypto/crypto.dart';
 
-String serverUrl = 'http://seeu.energokrzem.nazwa.pl';
+String serverUrl = 'http://xx.xx.xx.xx';
 
 class CreateAccountScreen extends StatefulWidget {
   @override
@@ -41,7 +41,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
     
 
     String hashedPassword = hashWithSHA1(password);
-    String url = 'http://seeu.energokrzem.nazwa.pl/createUser';
+    String url = 'http://xx.xx.xx.xx/createUser';
 
     if (username.isNotEmpty && password.isNotEmpty && email.isNotEmpty) {
       try {
@@ -152,4 +152,5 @@ void main() {
   runApp(MaterialApp(
     home: CreateAccountScreen(),
   ));
+
 }

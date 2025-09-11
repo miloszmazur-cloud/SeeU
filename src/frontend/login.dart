@@ -33,7 +33,7 @@ class LoginScreen extends StatelessWidget {
 }
       String hashedPassword = hashWithSHA1(password); 
 
-    String url = 'http://seeu.energokrzem.nazwa.pl/loginUser';
+    String url = 'http://xx.xx.xx.xx/loginUser';
     try {
       final response = await http.post(Uri.parse(url),
       headers: {
@@ -170,4 +170,5 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
+
 }

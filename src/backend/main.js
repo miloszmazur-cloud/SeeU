@@ -55,10 +55,10 @@ serwer.get("/", (req, res) => {
 });
 
 var dbcon = mysql.createPool({
-    host: "MariaDB1011.energokrzem.nazwa.pl",
-    user: "energokrzem_databaseseeu1",
-    password: "BazaDanych5533",
-    database: "energokrzem_databaseseeu1"
+    host: "xx.xx.xx.xx",
+    user: "xx",
+    password: "xx",
+    database: "xx"
 });
 
 
@@ -86,7 +86,7 @@ function generateAccessToken(user) {  // sprawdzic na tej stronce
     const payload = {    
         login: user
     };  
-    const secret = 'MojeWymysloneHasloDoSzyfrowaniaTokenow';  
+    const secret = 'xx';  
     const options = {
         expiresIn: '1000h' 
     };  
@@ -121,7 +121,7 @@ serwer.post("/loginUser", (req, res) => { ///:login/password
 //---------------- begin:
 
 function verifyAccessToken(token) {
-    const secret = 'MojeWymysloneHasloDoSzyfrowaniaTokenow';
+    const secret = 'xx';
     try {
         const decoded = jwt.verify(token, secret);    
         return { 
@@ -287,3 +287,4 @@ serwer.get("/getMessage", authenticateToken, (req, res) => {
 
 
 serwer.listen(3000);
+
